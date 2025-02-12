@@ -1,0 +1,231 @@
+// Question 1: What is Control Flow in JavaScript?
+// Control flow refers to the order in which statements are executed in a JavaScript program. By default, JavaScript runs code line by line, but control structures like if-else, loops, and switch statements allow decisions to be made.
+
+// // if else example:
+// // let age = 18;
+
+// // if (age >= 18) {
+// //     console.log("You are an adult.");
+// // } else {
+// //     console.log("You are a minor.");
+// // }
+
+
+
+// Question 2: How Do Switch Statements Work in JavaScript?
+// A switch statement is used to test a variable against multiple possible values and execute code based on a match. It is often easier to read than multiple if-else statements when handling many conditions.
+
+// let day = "Monday";
+
+// switch (day) {
+//     case "Monday":
+//         console.log("Start of the workweek.");
+//         break;
+//     case "Friday":
+//         console.log("Weekend is near!");
+//         break;
+//     case "Sunday":
+//         console.log("It's a rest day.");
+//         break;
+//     default:
+//         console.log("Just another day.");
+// }
+
+
+Loops in JavaScript
+Question 1: Explain the different types of loops in JavaScript (for, while, do-while). Provide a basic example of each.
+Loops in JavaScript are used to repeat a block of code multiple times. The three main types of loops are for, while, and do-while.
+
+The for loop is used when the number of iterations is known. It consists of an initialization, a condition, and an increment or decrement. For example:
+
+
+for (let i = 1; i <= 5; i++) {
+    console.log("Count: " + i);
+}
+This loop runs five times, printing numbers from 1 to 5.
+
+The while loop is used when the number of iterations is unknown and depends on a condition. It first checks the condition before executing the code block. For example:
+
+
+let i = 1;
+while (i <= 5) {
+    console.log("Count: " + i);
+    i++;
+}
+This loop will continue running as long as the condition i <= 5 is true.
+
+The do-while loop is similar to the while loop, but it ensures that the block of code executes at least once before checking the condition. For example:
+
+
+let i = 1;
+do {
+    console.log("Count: " + i);
+    i++;
+} while (i <= 5);
+Even if the condition is false at the beginning, the do-while loop executes at least once before stopping.
+
+Question 2: What is the difference between a while loop and a do-while loop?
+The main difference between a while loop and a do-while loop is that a while loop checks the condition before executing the loop, meaning it may not run at all if the condition is false. In contrast, a do-while loop executes the code block at least once before checking the condition. For example, in a while loop:
+
+
+let i = 10;
+while (i < 5) {
+    console.log("Inside while loop");
+}
+The loop will not execute because i < 5 is false. However, with a do-while loop:
+
+
+let i = 10;
+do {
+    console.log("Inside do-while loop");
+} while (i < 5);
+The message will be printed once, even though the condition is false.
+
+
+
+
+
+Functions in JavaScript
+Question 1: What are functions in JavaScript? Explain the syntax for declaring and calling a function.
+A function in JavaScript is a reusable block of code that performs a specific task. Functions help in organizing and reusing code efficiently. A function is declared using the function keyword followed by a name, parentheses, and curly braces. The syntax for declaring a function is:
+
+function f1() {
+    console.log("Hello, JavaScript!");
+}
+To call the function, simply use its name followed by parentheses:
+
+f1();
+This will execute the code inside the function and print "Hello, JavaScript!".
+
+Question 2: What is the difference between a function declaration and a function expression?
+A function declaration is a function that is defined using the function keyword and a name. It can be called before it is defined because JavaScript hoists function declarations. For example:
+
+
+function f1() {
+    console.log("Hello!");
+}
+A function expression, for other , assigns a function to a variable. It cannot be called before it is defined. For example:
+
+const f1 = function() {
+    console.log("Hello!");
+};
+
+
+
+Question 3: Discuss the concept of parameters and return values in functions.
+Functions can accept parameters, which are values passed into the function to perform a task. They can also return values using the return statement. For example:
+
+
+function add(a, b) {
+    return a + b;
+}
+let sum = add(5, 3);
+console.log(sum);
+
+
+
+
+
+Arrays in JavaScript
+Question 1: What is an array in JavaScript? How do you declare and initialize an array?
+An array is a special type of object that stores multiple values in a single variable. Arrays are declared using square brackets []. For example:
+let colors = ["red", "blue", "green"];
+Arrays can hold different data types, and elements are accessed using their index numbers, starting from 0.
+
+Question 2: Explain the methods push(), pop(), shift(), and unshift() used in arrays.
+The push() method adds an element to the end of an array.
+let fruits = ["apple", "banana"];
+fruits.push("orange");
+console.log(fruits); 
+
+The pop() method removes the last element from an array.
+fruits.pop();
+console.log(fruits); 
+
+The shift() method removes the first element from an array.
+fruits.shift();
+console.log(fruits); 
+
+The unshift() method adds an element to the beginning of an array.
+fruits.unshift("grape");
+console.log(fruits); 
+
+
+
+
+
+
+Objects in JavaScript
+Question 1: What is an object in JavaScript? How are objects different from arrays?
+An object is a collection of key-value pairs, where each key is a property name and each value can be any data type. Unlike arrays, which store ordered lists of values, objects store data using named properties. Example of an object:
+
+let person = { name: "komal", age: 25 };
+Objects are useful for grouping related data, while arrays are better for storing lists.
+
+Question 2: Explain how to access and update object properties using dot notation and bracket notation.
+Dot notation is the simplest way to access object properties.
+
+
+console.log(person.name); 
+Bracket notation is used when property names have spaces or are stored in variables.
+
+
+console.log(person["age"]); 
+To update properties, assign a new value using either notation.
+
+
+person.age = 30;
+person["name"] = "komal";
+
+
+
+
+
+
+JavaScript Events
+Question 1: What are JavaScript events? Explain the role of event listeners.
+JavaScript events occur when users interact with a webpage, such as clicking a button or typing in a form. Event listeners detect these actions and run specified code.
+
+Question 2: How does the addEventListener() method work in JavaScript? Provide an example.
+The addEventListener() method attaches an event handler to an element.
+
+
+document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+JavaScript Timing Events
+Question 1: Explain the setTimeout() and setInterval() functions in JavaScript.
+setTimeout() delays code execution by a specified time.
+
+
+setTimeout(() => console.log("Hello "), 2000);
+setInterval() repeatedly executes a function at set intervals.
+
+setInterval(() => console.log("Repeating message"), 1000);
+
+
+
+
+
+JavaScript Error Handling
+
+Question 1: What is error handling in JavaScript? Explain try, catch, and finally.
+Error handling prevents programs from crashing due to unexpected errors. The try block runs code, catch handles errors, and finally runs regardless of success or failure.
+
+
+try {
+    let x = y; 
+} catch (error) {
+    console.log("An error occurred: " + error.message);
+} finally {
+    console.log("This always runs.");
+}
+Question 2: Why is error handling important?
+Error handling improves user experience, prevents crashes, and helps debug issues efficiently.
+
+
+
+
+
+
+

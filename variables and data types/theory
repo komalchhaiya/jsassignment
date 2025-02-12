@@ -1,0 +1,41 @@
+Question 1: What are variables in JavaScript? How do you declare a variable using var, let, and const?
+Variables in JavaScript are used to store data that can be used and changed later in the program. There are three ways to declare a variable:
+
+var : Older way to declare variables. It can be re-declared and updated.
+var name = 'komal';
+let :Modern way to declare variables. It can be updated but not re-declared and has block scope.
+let name = 'komal';
+
+const : Used for variables that should not change. It cannot be updated or re-declare
+const name ='komal';
+
+• Question 2: Explain the different data types in JavaScript. Provide examples for each.
+
+String == Represents text.
+let name = "komal";
+
+Number : Represents numbers (both integers and decimals).
+let age1 = 20;
+let price = 100.9;
+
+Boolean : Represents true or false.
+let isStudent = true;
+
+Undefined : that has been declared but not assigned a value.
+let city;
+
+object: having value and attribute.
+let person = { name: "komal", age: 20 };
+
+Array : that holds a list of values.
+let colors = ["red", "blue", "green"];
+
+
+• Question 3: What is the difference between undefined and null in JavaScript?
+undefined means a variable has been declared but not assigned a value.
+let x;
+console.log(x); 
+null is an empty value assigned to a variable, meaning no value;
+
+let y = null;
+console.log(y); /

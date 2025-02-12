@@ -1,0 +1,45 @@
+Question 1: What are the different types of operators in JavaScript?
+• Arithmetic operators
+• Assignment operators
+• Comparison operators
+• Logical operator
+
+Question 1: Types of Operators in JavaScript
+
+1. Arithmetic Operators (Used for math operations)  
+  
+   let a = 10, b = 5;
+   console.log(a + b); 
+   console.log(a % b); 
+
+   
+2. Assignment Operators --(Assign values to variables)  
+ 
+   let x = 10;
+   x += 5; // x = x + 5
+   console.log(x); // 15
+   ```
+
+3. Comparison Operators (Compare values)  
+  
+   console.log(5 == "5"); 
+   console.log(5 === "5"); 
+  
+
+4. Logical Operators(Used for conditions)  
+  
+   console.log(true && false); 
+   console.log(true || false); /
+   console.log(!true);        
+
+
+
+Question 2: Difference Between `==` and `===` 
+
+- `==` (Loose comparison) → Compares only values, ignores types.  
+
+  console.log(5 == "5"); 
+
+`===` (Strict comparison) → Compares values and types.  
+  console.log(5 === "5");
+
